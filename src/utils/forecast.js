@@ -23,7 +23,10 @@ function forecast({latitude,longitude}, callback) {
             const {current} = body
             callback(undefined, {
                 message: (
-                    `It is currently ${current.temperature}°C degrees out. It feels like ${current.feelslike}°C degrees out.`
+                    `
+                    It is currently ${current.temperature}°C degrees out. 
+                    It feels like ${current.feelslike}°C degrees out. 
+                    There will be ${current.precip} precipitation`
                 ) 
             })
             
